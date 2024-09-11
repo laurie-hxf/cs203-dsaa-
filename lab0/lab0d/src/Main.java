@@ -16,19 +16,7 @@ class Main {
             int max=-100001;
             int max_locate=0;
             for(int j=0;j<each_case_number;j++){
-                int input= in.nextInt();
-                if(input>max){
-                    max=input;
-                    max_locate=j;
-                }
-                if(input<min){
-                    min=input;
-                    min_locate=j;
-                }
-            }
-            if(max_locate<=min_locate){
-                out.println(max-min);
-            }
+               
         }
         //out.println("Hello World");
         out.close();
