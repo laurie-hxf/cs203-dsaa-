@@ -1,24 +1,30 @@
-//TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
-// 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
 import java.io.*;
 import java.util.*;
-class Main {
+
+public class Main {
     public static void main(String[] args) {
         //sample
         QReader in = new QReader();
         QWriter out = new QWriter();
-        int number_testcase=in.nextInt();
-        for(int i=0;i<number_testcase;i++){
-            int each_case_number= in.nextInt();
-            int[]arr=new int[each_case_number];
-            int min=100001;
-            int min_locate=0;
-            int max=-100001;
-            int max_locate=0;
-            for(int j=0;j<each_case_number;j++){
-               
+        int n = in.nextInt();
+
+        for(int i = 0; i < n; i++) {
+            int each_case_number=in.nextInt();
+            int max;
+            max=in.nextInt();
+            int difference=-200001;
+            for(int j=1;j<each_case_number;j++) {
+                int input=in.nextInt();
+                int temp_difference=max-input;
+                if(input>max) {
+                    max=input;
+                }
+                if(temp_difference>difference) {
+                    difference=temp_difference;
+                }
+            }
+            out.println(difference);
         }
-        //out.println("Hello World");
         out.close();
     }
 }
