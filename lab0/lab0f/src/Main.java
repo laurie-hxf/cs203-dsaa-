@@ -7,35 +7,31 @@ public class Main {
         QReader in = new QReader();
         QWriter out = new QWriter();
         int n = in.nextInt();
+        int[][]barrel=new int[4][10];
         for(int i = 0; i < n; i++) {
-            int[] Mahjong=new int[n];
+            String line = in.next();
+            for(int j = 0; j < 14; j+=2) {
+                int number=line.charAt(j)-'0';
+                char kind=line.charAt(j+1);
+                switch(kind) {
+                    case 'b':
+                        barrel[0][number]++;
+                        break;
+                    case 'w':
+                        barrel[1][number]++;
+                        break;
+                    case 's':
+                        barrel[2][number]++;
+                        break;
+                    case 'z':
+                        barrel[3][number]++;
+                        break;
+                }
+            }
+            
         }
         out.println("Hello World");
         out.close();
-    }
-    public int help(String s) {
-        int hash=0;
-        switch (s.charAt(0)){
-            case 'W':
-                hash=(int)s.charAt(1)-31;
-                break;
-            case 'T':
-                hash=(int)s.charAt(1)-31+8;
-                break;
-            case 'Y':
-                hash=(int)s.charAt(1)-31+18;
-                break;
-            case 'E':
-                hash=27;
-                break;
-            case 'S':
-                hash=27;
-                break;
-            case 'W':
-                hash=27;
-                break;
-        }
-        return 0;
     }
 }
 
