@@ -48,7 +48,6 @@ public class Main {
             }
             for(int j:merged) {
                 out.print(j+" ");
-
             }
             out.println("");
         }
