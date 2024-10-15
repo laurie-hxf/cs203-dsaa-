@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9634e0b1-b24e-4a30-a059-72f239e7689d" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.Main.executor": "Debug"
+    "应用程序.Main.executor": "Run"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -66,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728638944412</updated>
       <workItem from="1728638945540" duration="1253000" />
-      <workItem from="1728806505706" duration="1685000" />
+      <workItem from="1728806505706" duration="2105000" />
     </task>
     <servers />
   </component>
