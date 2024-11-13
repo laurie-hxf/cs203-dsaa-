@@ -16,9 +16,7 @@ public class Main {
             given_plus[i]=given.charAt(i);
             given_plus[i+given.length()]=table[given.charAt(i)-'a'];
         }
-//        for(int i=0;i<given_plus.length;i++){
-//            out.print(given_plus[i]+" ");
-//        }
+
         String double_string=new String(given_plus);
         int n = double_string.length();
         int[] next = new int[n];
