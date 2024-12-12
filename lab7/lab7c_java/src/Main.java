@@ -1,29 +1,27 @@
 //
 // Created by purple on 24-12-4.
 //
-#include <iostream>
-#include <vector>
-using namespace std;
 
-struct Player {
-    int power;
-    int time;
 
-    Player() {
-        power = 0;
-        time = 0;
-    }
+class Player {
+int power;
+int time;
 
-    Player(int power, int time): power(power), time(time) {
-    }
-};
+Player() {
+    power = 0;
+    time = 0;
+}
+
+Player(int power, int time): power(power), time(time) {
+        }
+        };
 
 class heap {
-private :
+    private :
     vector<int> Players;
     int size;
 
-public:
+    public:
     explicit heap(int size): size(0) ,Players(size) {
     }
     ~heap() = default;
@@ -85,7 +83,7 @@ public:
 
 };
 
-void merge(vector<Player> &players, int left, int mid, int right);
+void merge(vector<Player> players, int left, int mid, int right);
 
 void mergeSort(vector<Player> &players, int left, int right);
 
