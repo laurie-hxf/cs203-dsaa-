@@ -107,7 +107,6 @@ public:
             } else {
                 if (!root->left || !root->right) {
                     node* temp = root->left ? root->left : root->right;
-                    // Properly delete root here if necessary
                     return temp;
                 } else {
                     node* minNode = getMinNode(root->right);
@@ -123,6 +122,7 @@ public:
         node* current = root;
         int difference = INT32_MAX;
         int closest_val = 0;
+        int record=0;
 
         while (current) {
             if (current->val == val) {
@@ -131,16 +131,35 @@ public:
                 break;
             } else if (val < current->val) {
                 int temp_difference = abs(current->val - val);
-                if (temp_difference < difference) {
-                    difference = temp_difference;
-                    closest_val = current->val;
+                if (temp_difference <= difference) {
+                    if(temp_difference == difference) {
+                        if(current->val<record) {
+                            difference = temp_difference;
+                            closest_val = current->val;
+                            record = current->val;
+                        }
+                    }else {
+                        difference = temp_difference;
+                        closest_val = current->val;
+                        record = current->val;
+                    }
+
                 }
                 current = current->left;
             } else {
                 int temp_difference = abs(current->val - val);
-                if (temp_difference < difference) {
-                    difference = temp_difference;
-                    closest_val = current->val;
+                if (temp_difference <= difference) {
+                    if(temp_difference == difference) {
+                        if(current->val<record) {
+                            difference = temp_difference;
+                            closest_val = current->val;
+                            record = current->val;
+                        }
+                    }else {
+                        difference = temp_difference;
+                        closest_val = current->val;
+                        record = current->val;
+                    }
                 }
                 current = current->right;
             }
@@ -158,7 +177,7 @@ int main() {
     AVL_Tree people;
     int pets_size = 0;
     int people_size = 0;
-    int sum = 0;
+    long long sum = 0;
     node* root_pats = nullptr;
     node* root_people = nullptr;
 
@@ -185,6 +204,6 @@ int main() {
         }
     }
 
-    printf("%d", sum);
+    printf("%lld", sum);
     return 0;
 }
